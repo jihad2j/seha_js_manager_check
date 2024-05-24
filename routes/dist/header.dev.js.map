@@ -1,0 +1,1 @@
+{"version":3,"sources":["header.js"],"names":["myFunction","module","exports"],"mappings":";;AAAA,SAASA,UAAT,GAAsB,CAClB;AACD;;AAEDC,MAAM,CAACC,OAAP,GAAiBF,UAAjB","sourcesContent":["function myFunction() {\r\n    // Your code here\r\n  }\r\n  \r\n  module.exports = myFunction;"],"file":"header.dev.js"}

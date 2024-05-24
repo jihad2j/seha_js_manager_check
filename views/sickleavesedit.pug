@@ -1,0 +1,83 @@
+doctype html
+html
+  head
+    title القائمة
+    link(rel="stylesheet" href="/static/css/styless.css")
+  body  
+    block content
+form(action="/editqr/" + obj._id method="POST" class="mx-0 row gx-3 gy-4 mt-3")
+  div.input-group
+    label(for="inputgsl" class="form-label") رمز الاجازة
+    input(name="inputgsl" type="text" class="form-control" value=obj.inputgsl  id="inputgsl")
+  div.input-group
+    label(for="inputindurationh" class="form-label") الاجازة عربي
+    input(name="inputindurationh" type="text" value=obj.inputindurationh class="form-control" id="inputindurationh")
+    input(name="inputdurationm" type="text" class="form-control" value=obj.inputdurationm  id="inputdurationm")
+    label(for="inputdurationm" class="form-label") الاجازة انجليزي
+  div.input-group
+    label(for="inputdatehin" class="form-label") تاريخ الدخول هجري
+    input(name="inputdatehin" type="text" class="form-control" value=obj.inputdatehin id="inputdatehin")
+    input(name="inputdatemin" type="text" class="form-control" value=obj.inputdatemin id="inputdatemin")
+    label(for="inputdatemin" class="form-label") تاريخ الدخول ميلادي
+  div.input-group
+    label(for="inputdatehout" class="form-label") تاريخ الخروج هجري
+    input(name="inputdatehout" type="text" class="form-control" value=obj.inputdatehout id="inputdatehout")
+    input(name="inputdatemout" type="text" class="form-control" value=obj.inputdatemout  id="inputdatemout")
+    label(for="inputdatemout" class="form-label") تاريخ الخروج ميلادي
+  div.input-group
+    label(for="inputdatesick" class="form-label") تاريخ اصدار التقرير
+    input(name="inputdatesick" type="text" class="form-control" value=obj.inputdatesick id="inputdatesick")
+  div.input-group
+    label(for="inputnamear" class="form-label") الاسم
+    input(name="inputnamear" type="text" class="form-control" value=obj.inputnamear id="inputnamear")
+    input(name="inputnameen" type="text" class="form-control" value=obj.inputnameen id="inputnameen")
+    label(for="inputnameen" class="form-label") name
+  div.input-group
+    label(for="inputidentity" class="form-label") الهوية
+    input(name="inputidentity" type="text" class="form-control" value=obj.inputidentity id="inputidentity")
+  div.input-group
+    label(for="inputnationalityar" class="form-label") الجنسية
+    input(name="inputnationalityar" type="text" class="form-control" value=obj.inputnationalityar id="inputnationalityar")
+    input(name="inputnationalityen" type="text" class="form-control" value=obj.inputnationalityen id="inputnationalityen")
+    label(for="inputnationalityen" class="form-label") Nathoinal
+  div.input-group
+    label(for="inputworkar" class="form-label") جهة العمل
+    input(name="inputworkar" type="text" class="form-control" value=obj.inputworkar id="inputworkar")
+    input(name="inputworken" type="text" class="form-control" value=obj.inputworken id="inputworken")
+    label(for="inputworken" class="form-label") worker
+  div.input-group
+    label(for="inputdoctorar" class="form-label") اسم الطبيب
+    input(name="inputdoctorar" type="text" class="form-control" value=obj.inputdoctorar id="inputdoctorar")
+    input(name="inputdoctoren" type="text" class="form-control" value=obj.inputdoctoren id="inputdoctoren")
+    label(for="inputdoctoren" class="form-label") Doctor name
+  div.input-group
+    label(for="inputworktypear" class="form-label") المسمى الوظيفي
+    input(name="inputworktypear" type="text" class="form-control" value=obj.inputworktypear id="inputworktypear")
+    input(name="inputworktypeen" type="text" class="form-control" value=obj.inputworktypeen id="inputworktypeen")
+    label(for="inputworktypeen" class="form-label") position
+  div.input-group
+    label(for="inputcentralnamear" class="form-label") اسم المركز
+    input(name="inputcentralnamear" type="text" class="form-control" value=obj.inputcentralnamear id="inputcentralnamear")
+    input(name="inputtimeparint" type="text" class="form-control" value=obj.inputtimeparint id="inputtimeparint")
+    label(for="inputtimeparint" class="form-label") وقت الطباعة
+  div.input-group
+    label(for="inputcentralnameen" class="form-label") Central name
+    input(name="inputcentralnameen" type="text" class="form-control" value=obj.inputcentralnameen id="inputcentralnameen")
+    input(name="inputdateparint" type="text" class="form-control" value=obj.inputdateparint id="inputdateparint")
+    label(for="inputdateparint" class="form-label") تاريخ الطباعة
+  div.input-group
+    label(for="inputcentralid" class="form-label") رقم الترخيص
+    input(name="inputcentralid" type="text" class="form-control" value=obj.inputcentralid id="inputcentralid")
+    input(name="inputdaynum" type="text" class="form-control" value=obj.inputdaynum id="inputdaynum")
+    label(for="inputdaynum" class="form-label") عدد الايام
+  div.input-group
+    label(for="inputcentralnum" class="form-label") رقم المركز
+    input(name="inputcentralnum" type="text" class="form-control" value=obj.inputcentralnum id="inputcentralnum")
+    label(for="inputdatefrom" class="form-label") الاجازة من
+    input(name="inputdatefrom" placeholder="from" type="text" class="form-control" value=obj.inputdatefrom id="inputdatefrom")
+    label(for="inputdateto" class="form-label") الاجازة الى
+    input(name="inputdateto" placeholder="to" type="text" class="form-control" value=obj.inputdateto id="inputdateto")
+
+  div.input-group
+    button(type="submit" class="btn btn-primary") تعديل البيانات
+  

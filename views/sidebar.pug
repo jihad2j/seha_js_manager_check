@@ -1,0 +1,58 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    title Neumorphism Sidebar Menu | CodingLab
+    link(rel='stylesheet', href='/static/css/sidebar.css')
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/al1l.min.css")
+  body
+    input(type="checkbox", id="check")
+    label.button.bars(for="check")
+      i.fas.fa-bars
+    div.side_bar
+      div.title
+        div.logo CodingLab
+        label.button.cancel(for="check")
+          i.fas.fa-times
+      ul
+        li
+          a(href="#")
+            i.fas.fa-qrcode
+            | Dashboard
+        li
+          a(href="#")
+            i.fas.fa-link
+            | Shortcuts
+        li
+          a(href="#")
+            i.fas.fa-stream
+            | Overview
+        li
+          a(href="#")
+            i.fas.fa-calendar-week
+            | Events
+        li
+          a(href="#")
+            i.fas.fa-question-circle
+            | About
+        li
+          a(href="#")
+            i.fas.fa-sliders-h
+            | Services
+        li
+          a(href="#")
+            i.fas.fa-phone-volume
+            | Contact
+        li
+          a(href="#")
+            i.fas.fa-comments
+            | Feedback
+      div.media_icons
+        a(href="#")
+          i.fab.fa-facebook-f
+        a(href="#")
+          i.fab.fa-twitter
+        a(href="#")
+          i.fab.fa-instagram
+        a(href="#")
+          i.fab.fa-youtube

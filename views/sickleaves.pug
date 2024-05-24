@@ -1,0 +1,116 @@
+html(lang="ar", dir="rtl")
+  head
+    meta(http-equiv="origin-trial", content="Az520Inasey3TAyqLyojQa8MnmCALSEU29yQFW8dePZ7xQTvSt73pHazLFTK5f7SyLUJSo2uKLesEtEa9aUYcgMAAACPeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZS5jb206NDQzIiwiZmVhdHVyZSI6IkRpc2FibGVUaGlyZFBhcnR5U3RvcmFnZVBhcnRpdGlvbmluZyIsImV4cGlyeSI6MTcyNTQwNzk5OSwiaXNTdWJkb21haW4iOnRydWUsImlzVGhpcmRQYXJ0eSI6dHJ1ZX0=")
+    link(rel="icon", href="./favicon.png")
+    meta(name="viewport", content="width=device-width,initial-scale=1")
+    meta(name="theme-color", content="#000000")
+    link(rel="apple-touch-icon", href="./logo.png")
+    title صحة - منصة الخدمات الصحية
+    meta(name="description", content="هي منصة إلكترونية تخدم القطاع الصحي في المملكة من خلال تقديم خدمات إلكترونية معتمدة من قبل وزارة الصحة، أنشئت منصة صحة تماشيًا مع رؤية المملكة 2030 وتفعيلاً للتوجه الحكومي، وتهدف إلى أتمتة وتوحيد الإجراءات والخدمات وتسهيلها في جميع الجهات الصحية وتشمل العديد من الخدمات الصحية التي تحت مظلة منظومة الصحة وقطاعاتها المتنوعة للأفراد من المنشأت الطبية.")
+    link(rel="manifest", href="./manifest.json")
+    link(href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&amp;display=swap", rel="stylesheet")
+    link(href="./static/css/main.07f24069.css", rel="stylesheet")
+    meta(charset="utf-8", data-react-helmet="true")
+    meta(name="description", content="هي منصة إلكترونية تخدم القطاع الصحي في المملكة من خلال تقديم خدمات إلكترونية معتمدة من قبل وزارة الصحة، أنشئت منصة صحة تماشيًا مع رؤية المملكة 2030 وتفعيلاً للتوجه الحكومي، وتهدف إلى أتمتة وتوحيد الإجراءات والخدمات وتسهيلها في جميع الجهات الصحية وتشمل العديد من الخدمات الصحية التي تحت مظلة منظومة الصحة وقطاعاتها المتنوعة للأفراد من المنشأت الطبية.", data-react-helmet="true")
+  body(style="height: 100%; margin: 0; padding: 0;")
+    | <noscript>You need to enable JavaScript to run this app.</noscript>
+    #root
+      .App
+        .header.navbar.navbar-expand-lg.navbar-light
+          .nav-container
+            a.navbar-brand(href="#/")
+              img.logo(src="./static/media/seha_logo.4dde29e5c4f38890ccf9787220bcc5be.svg", alt="logo")
+            .d-lg-none.d-xl-none.justify-content-end.menu
+              button.d-inline-flex.menu-img.navbar-toggler.collapsed(aria-controls="responsive-navbar-nav", type="button", aria-label="Toggle navigation")
+                span.navbar-toggler-icon
+            .white.justify-content-between.navbar-collapse.collapse#responsive-navbar-nav
+              .justify-content-between.navbar-nav
+                a.link.nav-link(data-rr-ui-event-key="1", href="#/services") الخدمات
+                a.link.nav-link(data-rr-ui-event-key="2", href="#/inquiries") الاستعلامات
+              .justify-content-between.navbar-nav
+                a.nav-link(data-rr-ui-event-key="4", href="#/iamredirection/1")
+                  p إنشاء حساب
+                a.login.nav-link(data-rr-ui-event-key="5", href="#/account/login")
+                  img(src="./static/media/user_o.7825677e64284b06f60f7c30082fed56.svg", alt="logo")
+                  p تسجيل الدخول
+    #top-button(style="display: none;")
+      svg#arrow-up-c(width="14.4", height="18.503", viewBox="0 0 14.4 18.503")
+        path(d="M8.862,11.37,14.381,6.1a1.7,1.7,0,0,1,2.355,0l5.54,5.272a1.555,1.555,0,0,1,0,2.271,1.738,1.738,0,0,1-2.376,0l-2.649-2.528V22.519a1.684,1.684,0,0,1-3.364,0V11.113l-2.649,2.534a1.738,1.738,0,0,1-2.376,0,1.561,1.561,0,0,1,0-2.276Z", transform="translate(-8.369 -5.625)", fill="#00a1c9")
+    .inner-page.inquiries-container
+      h1.heading الإجازات المرضية
+      p.sub-heading خدمة الاستعلام عن الإجازات المرضية تتيح لك الاستعلام عن حالة طلبك للإجازة ويمكنك طباعتها عن طريق تطبيق صحتي
+      .row.justify-content-center.mt-1
+        .col-md-5.p-4
+          .form-group
+            input.form-control(type="text", maxlength="14", placeholder="رمز الخدمة", id="normalizedservicecode", value="")
+          .form-group
+            label
+            input.form-control(type="text", maxlength="10", pattern="\d*", placeholder="رقم الهوية / الإقامة", id="patientid", value="")
+          .results-inquiery.row#resultsDiv(style="display: none;")
+            .col-md-6
+              span الاسم:
+              h6#patientname
+            .col-md-6
+              span تاريخ إصدار تقرير الإجازة:
+              h6#sickleavedate
+            .col-md-6
+              span تبدأ من:
+              h6#from1
+            .col-md-6
+              span وحتى:
+              h6#to1
+            .col-md-6
+              span المدة بالأيام:
+              h6#duration 2
+            .col-md-6
+              span اسم الطبيب:
+              h6#doctorname
+            .col-md-6
+              span المسمى الوظيفي:
+              h6#jobtitle
+          .alert.alert-danger.mt-2#alerterror(style="display: none;") لا يوجد نتائج
+          .alert.alert-danger.mt-2#alerterror2(style="display: none;") خطأ في الاستعلام
+          button.btn.btn-primary.mt-3#submit استعلام
+          button.btn.btn-primary.mt-3#toggleButton(style="display: none;") استعلام جديد
+        .col-md-12.text-center
+          a.btn.btn-primary.mb-3(href="#/inquiries") رجوع للخدمات
+    .mini-footer-container.container-fluid
+      ul.logos-wrapper
+        li
+          img.logo(src="./static/media/lean-logo.47f1c2c4f559aab0fc8472beba56bb76.svg")
+        li
+          img.logo(src="./static/media/MOH-logo.3721a12f98819dbb30527088a659b864.svg")
+      .footer-note-wrapper
+        p منصة صحة معتمدة من قبل وزارة الصحة © 2024
+        ul
+          li
+            a سياسة الخصوصية وشروط الإستخدام
+          li
+            a(href="https://seha.sa/Content/LandingPages/UserManual.pdf") دليل الاستخدام
+      ul.links-wrapper
+        li
+          a(href="#/") الرئيسية
+        li
+          a(href="#/faq") الأسئلة الشائعة
+        li
+          a(href="/manger") تواصل معنا
+      ul.contact-wrapper
+        li.socials-wrapper
+          button
+            a(href="https://www.youtube.com/channel/UCb9ZrS2YcriYqIPIHNp9wcQ")
+              img(src="./static/media/youtube-fill.c5beebfa7cdb5cbc577b75e89ef8f244.svg")
+          button
+            a(href="https://twitter.com/seha_services")
+              img(src="./static/media/twitter-fill.9a9732867f4d5522891aeaa883b834bb.svg")
+        li
+          a(href="mailto: support@seha.sa") support@seha.sa
+        li
+          a(href="tel: 920002005") 920002005
+  script(defer="", src="https://static.cloudflareinsights.com/beacon.min.js/v84a3a4012de94ce1a686ba8c167c359c1696973893317", integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA==", data-cf-beacon="{&quot;rayId&quot;:&quot;85cb8f0e387dcc2f&quot;,&quot;version&quot;:&quot;2024.2.1&quot;,&quot;token&quot;:&quot;e370208f11b34d34bca931ffb6c58056&quot;}", crossorigin="anonymous")
+  div
+    div.grecaptcha-badge(data-style="bottomright", style="width: 256px; height: 60px; position: fixed; visibility: hidden; display: block; transition: right 0.3s ease 0s; bottom: 14px; right: -186px; box-shadow: gray 0px 0px 5px; border-radius: 2px; overflow: hidden;")
+      div.grecaptcha-logo
+        iframe(title="reCAPTCHA", width="256", height="60", role="presentation", name="a-sj7bbks6fdqh", frameborder="0", scrolling="no", sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation", src="https://www.google.com/recaptcha/api2/anchor?ar=2&amp;k=6LdApK4ZAAAAADhvh3s9bNw7cfsb7hLEjVVeKZii&amp;co=aHR0cHM6Ly93d3cuc2VoYS5zYTo0NDM.&amp;hl=ar&amp;v=vj7hFxe2iNgbe-u95xTozOXW&amp;size=invisible&amp;cb=v64vuhyov87c")
+      div.grecaptcha-error
+      textarea.g-recaptcha-response#g-recaptcha-response-100000(name="g-recaptcha-response", style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;")
+  script(src="./static/js/api.js")

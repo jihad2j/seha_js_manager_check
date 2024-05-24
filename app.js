@@ -16,6 +16,7 @@ const port = 3501
 
 const uri = "mongodb+srv://zoolka:zzzzz11111@masarproject.daj3l2l.mongodb.net/?retryWrites=true&w=majority&appName=masarproject";
 
+
 mongoose.connect(uri)
   .then(() => console.log('You successfully connected to MongoDB!'))
   .catch(err => console.error('Error connecting to MongoDB:', err));

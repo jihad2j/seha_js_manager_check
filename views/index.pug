@@ -1,0 +1,89 @@
+header()
+    
+head
+    title= "القائمة"
+    link(rel="stylesheet", href="/css/styless.css")
+    p اهلا بك في الاصدار التجربيبي من المنصة الالكترونية للمعقبين العرب
+    nav
+        ul
+            li
+                a(href="/manager/user") قائمة الملفات
+            li
+                a(href="/addqr") اضافة اجازة
+            li
+                a(href="/editqr") بحث 
+body
+
+    main
+    div#add-content
+
+script.
+    document.addEventListener("DOMContentLoaded", function() {
+        var links = document.querySelectorAll("a[href='/manager/user']");
+        links.forEach(function(link) {
+            link.addEventListener("click", function(e) {
+                e.preventDefault();
+                console.log(link.getAttribute("href"));
+                var xhr = new XMLHttpRequest();
+                xhr.open("GET", link.getAttribute("href"), true);
+                xhr.onreadystatechange = function() {
+                    if (xhr.readyState === 4 && xhr.status === 200) {
+                        document.getElementById("add-content").innerHTML = xhr.responseText;
+                    }
+                };
+                xhr.send();
+            });
+        });
+    });
+    document.addEventListener("DOMContentLoaded", function() {
+        var links = document.querySelectorAll("a[href='/addqr']");
+        links.forEach(function(link) {
+            link.addEventListener("click", function(e) {
+                e.preventDefault();
+                console.log(link.getAttribute("href"));
+                var xhr = new XMLHttpRequest();
+                xhr.open("GET", link.getAttribute("href"), true);
+                xhr.onreadystatechange = function() {
+                    if (xhr.readyState === 4 && xhr.status === 200) {
+                        document.getElementById("add-content").innerHTML = xhr.responseText;
+                    }
+                };
+                xhr.send();
+            });
+        });
+    });
+        script.
+            document.addEventListener("DOMContentLoaded", function() {
+                var links = document.querySelectorAll("a[href='/manager/user']");
+                links.forEach(function(link) {
+                    link.addEventListener("click", function(e) {
+                        e.preventDefault();
+                        console.log(link.getAttribute("href"));
+                        var xhr = new XMLHttpRequest();
+                        xhr.open("GET", link.getAttribute("href"), true);
+                        xhr.onreadystatechange = function() {
+                            if (xhr.readyState === 4 && xhr.status === 200) {
+                                document.getElementById("add-content").innerHTML = xhr.responseText;
+                            }
+                        };
+                        xhr.send();
+                    });
+                });
+            });
+                        document.addEventListener("DOMContentLoaded", function() {
+                var links = document.querySelectorAll("a[href='/manager/user']");
+                links.forEach(function(link) {
+                    link.addEventListener("click", function(e) {
+                        e.preventDefault();
+                        console.log(link.getAttribute("href"));
+                        var xhr = new XMLHttpRequest();
+                        xhr.open("GET", link.getAttribute("href"), true);
+                        xhr.onreadystatechange = function() {
+                            if (xhr.readyState === 4 && xhr.status === 200) {
+                                document.getElementById("add-content").innerHTML = xhr.responseText;
+                            }
+                        };
+                        xhr.send();
+                    });
+                });
+            });
