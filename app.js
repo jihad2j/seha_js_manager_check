@@ -14,8 +14,6 @@ var methodOverride = require('method-override')
 
 const port = 3501
 
-
-
 const uri = "mongodb+srv://zoolka:zzzzz11111@masarproject.daj3l2l.mongodb.net/?retryWrites=true&w=majority&appName=masarproject";
 
 
