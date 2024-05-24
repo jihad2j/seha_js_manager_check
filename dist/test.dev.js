@@ -4,11 +4,13 @@ var _require = require('mongodb'),
     MongoClient = _require.MongoClient,
     ServerApiVersion = _require.ServerApiVersion;
 
-var uri = "mongodb+srv://zoolka:4XVbSXRHbsuku5WI@manager.0frmth1.mongodb.net/?retryWrites=true&w=majority&appName=manager"; // Create a MongoClient with a MongoClientOptions object to set the Stable API version
+var uri = "mongodb+srv://zoolka:zzzzz11111@masarproject.daj3l2l.mongodb.net/?retryWrites=true&w=majority&appName=masarproject"; // Create a MongoClient with a MongoClientOptions object to set the Stable API version
 
 var client = new MongoClient(uri, {
   serverApi: {
-    version: ServerApiVersion.v1
+    version: ServerApiVersion.v1,
+    strict: true,
+    deprecationErrors: true
   }
 });
 
@@ -23,7 +25,7 @@ function run() {
 
         case 3:
           _context.next = 5;
-          return regeneratorRuntime.awrap(client.db("manager").command({
+          return regeneratorRuntime.awrap(client.db("admin").command({
             ping: 1
           }));
 
