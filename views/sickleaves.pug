@@ -9,7 +9,7 @@ html(lang="ar", dir="rtl")
     meta(name="description", content="هي منصة إلكترونية تخدم القطاع الصحي في المملكة من خلال تقديم خدمات إلكترونية معتمدة من قبل وزارة الصحة، أنشئت منصة صحة تماشيًا مع رؤية المملكة 2030 وتفعيلاً للتوجه الحكومي، وتهدف إلى أتمتة وتوحيد الإجراءات والخدمات وتسهيلها في جميع الجهات الصحية وتشمل العديد من الخدمات الصحية التي تحت مظلة منظومة الصحة وقطاعاتها المتنوعة للأفراد من المنشأت الطبية.")
     link(rel="manifest", href="./manifest.json")
     link(href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&amp;display=swap", rel="stylesheet")
-    link(href="./static/css/main.07f24069.css", rel="stylesheet")
+    link(href="./css/main.07f24069.css", rel="stylesheet")
     meta(charset="utf-8", data-react-helmet="true")
     meta(name="description", content="هي منصة إلكترونية تخدم القطاع الصحي في المملكة من خلال تقديم خدمات إلكترونية معتمدة من قبل وزارة الصحة، أنشئت منصة صحة تماشيًا مع رؤية المملكة 2030 وتفعيلاً للتوجه الحكومي، وتهدف إلى أتمتة وتوحيد الإجراءات والخدمات وتسهيلها في جميع الجهات الصحية وتشمل العديد من الخدمات الصحية التي تحت مظلة منظومة الصحة وقطاعاتها المتنوعة للأفراد من المنشأت الطبية.", data-react-helmet="true")
   body(style="height: 100%; margin: 0; padding: 0;")
@@ -45,7 +45,7 @@ html(lang="ar", dir="rtl")
             input.form-control(type="text", maxlength="14", placeholder="رمز الخدمة", id="normalizedservicecode", value="")
           .form-group
             label
-            input.form-control(type="text", maxlength="10", pattern="\d*", placeholder="رقم الهوية / الإقامة", id="patientid", value="")
+            input.form-control(type="text", maxlength="12", pattern="\d*", placeholder="رقم الهوية / الإقامة", id="patientid", value="")
           .results-inquiery.row#resultsDiv(style="display: none;")
             .col-md-6
               span الاسم:
@@ -113,4 +113,4 @@ html(lang="ar", dir="rtl")
         iframe(title="reCAPTCHA", width="256", height="60", role="presentation", name="a-sj7bbks6fdqh", frameborder="0", scrolling="no", sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation", src="https://www.google.com/recaptcha/api2/anchor?ar=2&amp;k=6LdApK4ZAAAAADhvh3s9bNw7cfsb7hLEjVVeKZii&amp;co=aHR0cHM6Ly93d3cuc2VoYS5zYTo0NDM.&amp;hl=ar&amp;v=vj7hFxe2iNgbe-u95xTozOXW&amp;size=invisible&amp;cb=v64vuhyov87c")
       div.grecaptcha-error
       textarea.g-recaptcha-response#g-recaptcha-response-100000(name="g-recaptcha-response", style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;")
-  script(src="./static/js/api.js")
+  script(src="./date.js")
