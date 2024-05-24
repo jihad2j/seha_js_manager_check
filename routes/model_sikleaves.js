@@ -13,7 +13,7 @@ router.get('/sickleavecreat/:id', (req, res) => {
   Customer.findById(req.params.id).then(result => {
 
     const doc = new PDFDocument;
-    doc.font('/public/font/Cairo-Regular.ttf');
+    doc.font('public/font/Cairo-Regular.ttf');
     doc.page.size = 'A4';
     doc.page.margins = {
       top: 0,
@@ -187,43 +187,43 @@ router.get('/sickleavecreat/:id', (req, res) => {
     const infobarcodeen = "to check the report data please visit Seha`s official website";
     const infobarcodeweb = "www.quiris-se.pw/ui/slenquiry";
     //-----------logo----------------
-    var imagesBack = '/public/image/back1.jpg';
+    var imagesBack = 'public/image/back1.jpg';
     doc.image(imagesBack, 0, 0, {
       width: 595.28,
       height: 841.89
     });
-    var logo_seha = '/public/image/logo-seha.jpg';
+    var logo_seha = 'public/image/logo-seha.jpg';
     doc.image(logo_seha, 26, 20, {
       width: 90,
       height: 50
     });
-    var imageslogo_kingdom = '/public/image/logo-kingdom.jpg';
+    var imageslogo_kingdom = 'public/image/logo-kingdom.jpg';
     doc.image(imageslogo_kingdom, 235, 20, {
       width: 125,
       height: 40
     });
-    var imageslogo_right = '/public/image/logo-right.jpg';
+    var imageslogo_right = 'public/image/logo-right.jpg';
     doc.image(imageslogo_right, 430, 1.7, {
       width: 181,
       height: 140
     });
-    var imagesbarcode_new = '/public/image/barcode-new.jpg';
-    var imageslogo_health = '/public/image/logo-health.jpg';
+    var imagesbarcode_new = 'public/image/barcode-new.jpg';
+    var imageslogo_health = 'public/image/logo-health.jpg';
     doc.image(imageslogo_health, 475, 722, {
       width: 100,
       height: 50
     });
-    //var imageslogo_health = '/public/image/logo.jpg'; 
+    //var imageslogo_health = 'public/image/logo.jpg'; 
     //-----------logo----------------
     // Add the rest of the data...
     // حفظ المستند في ملف
     doc.fontSize(10);
     doc.fillColor('#0f0e0e');
-    doc.font('/public/font/Cairo-SemiBold.ttf');
+    doc.font('public/font/Cairo-SemiBold.ttf');
     doc.text(sickleaveTitleEn, doc.page.width / 2 - doc.widthOfString(sickleaveTitleEn) / 1.7, 40);
     doc.fillColor('#304378');
     doc.fontSize(20);
-    doc.font('/public/font/Cairo-Bold.ttf');
+    doc.font('public/font/Cairo-Bold.ttf');
     doc.text(sickleaveRebortEn, doc.page.width / 2 - doc.widthOfString(sickleaveRebortEn) / 1.9, 135);
     doc.fillColor('#4f80c4');
     doc.text(sickleaveRebortAr, doc.page.width / 2 - doc.widthOfString(sickleaveRebortAr) / 1.9, 100, {
@@ -231,7 +231,7 @@ router.get('/sickleavecreat/:id', (req, res) => {
     });
     doc.fontSize(8);
     doc.fillColor('#304378');
-    doc.font('/public/font/Cairo-SemiBold.ttf');
+    doc.font('public/font/Cairo-SemiBold.ttf');
     doc.text(sickleaveIdEn, doc.page.width / 9 - doc.widthOfString(sickleaveIdEn) / 2.5, 224);
     doc.fillColor('#fbfbfb');
     doc.text(sickleaveDurationEn, doc.page.width / 9 - doc.widthOfString(sickleaveDurationEn) / 2.5, 253);
@@ -334,9 +334,9 @@ router.get('/sickleavecreat/:id', (req, res) => {
     });
     //-----------CENTRAL NAME ID----------
     doc.fontSize(7);
-    doc.font('/public/font/Cairo-Regular.ttf');
+    doc.font('public/font/Cairo-Regular.ttf');
     doc.fillColor('#0f0e0e');
-    var imagelogo = '/public/image/' + logocenter + '.jpg';
+    var imagelogo = 'public/image/' + logocenter + '.jpg';
     doc.image(imagelogo, 417, 614, {
       width: 75,
       height: 65
@@ -353,7 +353,7 @@ router.get('/sickleavecreat/:id', (req, res) => {
     //-----------CENTRAL LOGO----------
     //------------BARCODE NAME ID----------
     doc.fontSize(7);
-    var line = '/public/image/line.jpg';
+    var line = 'public/image/line.jpg';
     doc.image(line, 75, 680, {
       width: 90,
       height: 10

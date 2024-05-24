@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>القائمة</title>
+    <link rel="stylesheet" href="/css/styless.css">
+  </head>
+  <body> 
+    <form class="mx-0 row gx-3 gy-4 mt-3" action="/toolsinfo" method="post">
+      <div class="input-group">
+        <label for="namee">الاسم</label>
+        <input class="form-control" type="text" name="namee" id="namee" placeholder="الاسم">
+      </div>
+      <div class="input-group">
+        <label for="idf">الهوية</label>
+        <input class="form-control" type="text" id="idf" name="idf" maxlength="10" placeholder="الهوية">
+      </div>
+      <div class="input-group">
+        <label for="datain">من تاريخ</label>
+        <input type="date" id="datain" name="datain" value="" placeholder="من تاريخ" required>
+        <label for="dataout">الى تاريخ</label>
+        <input type="date" id="dataout" name="dataout" value="" placeholder="الى تاريخ" required>
+        <label for="dataout">--</label>
+      </div>
+      <div class="input-group">
+        <label for="empolye">جهة العمل</label>
+        <input class="form-control" type="text" id="empolye" name="empolye" placeholder="جهة العمل" required>
+      </div>
+      <div class="input-group">
+        <label for="Nationalnum">الجنسية </label>
+        <select class="form-control" name="Nationalnum" id="Nationalnum">
+          <option value="1">سعودي</option>
+          <option value="2"> مصري</option>
+          <option value="3">سوداني</option>
+          <option value="4">يمني</option>
+          <option value="5">سوري</option>
+          <option value="6">فلسطيني</option>
+        </select>
+      </div>
+      <div class="input-group">
+        <label for="doctor">اسم الطبيب</label>
+        <select class="form-control" name="doctor" id="doctor">
+          <option value="1">محمد راشد السر - استشاري</option>
+          <option value="2"> صالح عبدالوهاب عوض سليمان - طبيب عام</option>
+          <option value="3"> حسن ضيف الله الفاضل -استشاري</option>
+          <option value="4"> عبدالله مفرح علي عسير - طبيب عام</option>
+          <option value="5"> عبدالله محمد العمري - استشاري</option>
+          <option value="6">خالد علي العنزي - استشاري</option>
+          <option value="7"> احمد اسامة ابوالعينين - استشاري</option>
+          <option value="8"> فيصل وليد غالب شهوان - استشاري</option>
+          <option value="9"> محمد الكاف - استشاري</option>
+          <option value="10"> احمد العنزي - استشاري</option>
+          <option value="11">يوسف العمري - استشاري</option>
+          <option value="12">محمد سليمان البشير - استشاري</option>
+          <option value="13">مهدي الجارودي - استشاري</option>
+          <option value="14">اماني الحربي - استشاري</option>
+          <option value="15">سعود رخيص خليف العنزي - طبيب عام</option>
+          <option value="16">الاء علي الحارثي - طب الاسنان</option>
+          <option value="17">جمال راشد السر - استشاري</option>
+          <option value="18"> مصباح عباس الحنبلي - استشاري</option>
+          <option value="19"> محمد الصياد - استشاري    </option>
+        </select>
+      </div>
+      <div class="input-group">
+        <label for="center">المركز </label>
+        <select class="form-control" name="center" id="center">
+          <option value="1"> المركز السعودي الطبي</option>
+          <option value="2"> مستشفى الملك فهد العام</option>
+          <option value="3"> مستشفى الملك عبدالعزيز العام</option>
+          <option value="4"> مستشفى الملك سعود العام</option>
+          <option value="5"> مستشفى الملك خالد العام</option>
+          <option value="6"> مستشفى الملك سلمان العام</option>
+          <option value="7"> مستشفى الملك فهد التخصصي</option>
+          <option value="8"> مستشفى الملك عبدالعزيز التخصصي</option>
+          <option value="9"> مستشفى الملك سعود التخصصي</option>
+          <option value="10"> مستشفى الملك خالد التخصصي</option>
+          <option value="11"> مستشفى الملك سلمان التخصصي</option>
+          <option value="12"> مستشفى الملك عبدالله التخصصي</option>
+          <option value="13"> مستشفى الملك فهد الجامعي</option>
+          <option value="14"> مستشفى الصادق</option>
+          <option value="15"> مستشفى الامير سلطان</option>
+          <option value="16"> مستشفى خميس مشيط العام</option>
+          <option value="17"> مستشفى الخفجي العام</option>
+          <option value="18"> مستشفى جازان العام</option>
+          <option value="19"> مستشفى عسير المركزي</option>
+          <option value="20"> مستشفى الدمام المركزي</option>
+          <option value="21"> مستشفى حراء العام</option>
+          <option value="22"> مستشفى القصيم الوطني</option>
+          <option value="23"> مجمع رهف الطبي</option>
+          <option value="24"> مستشفى الحياة الوطني</option>
+          <option value="25"> مجمع الدمام الاهلي</option>
+          <option value="26"> مستشفى الظافر بنجران</option>
+          <option value="27"> مدينة الملك سعود الطبية</option>
+          <option value="28"> مدينة الملك عبدالله الطبية</option>
+          <option value="29"> مستشفى القوات المسلحة</option>
+          <option value="30"> مستشفى الامير منصور العسكري</option>
+          <option value="31"> مستشفى النماص العام</option>
+          <option value="32"> مجمع العالمي الطبي</option>
+          <option value="33">مجمع العائلة الطبي</option>
+          <option value="34">مستشفى الملك خالد بالخبر</option>
+          <option value="35">مستشفى محايل عسير العام</option>
+          <option value="36">مستشفى قنفذة العام</option>
+          <option value="37">مجمع الدمام الطبية</option>
+          <option value="38">مستشفى دلة الصحي</option>
+          <option value="39">مستشفى الدكتور سليمان حبيب</option>
+          <option value="40">السعودي الالماني الصحي</option>
+          <option value="41">مستشفى عرعر المركزي</option>
+          <option value="42">مستشفى رفحاء المركزي</option>
+          <option value="43">مستشفى شقراء العام</option>
+          <option value="44">مستشفى ضباء العام</option>
+          <option value="45">العيادات المتقدمة الاستشارية</option>
+          <option value="46">مستشفى الامير محمد بن عبدالعزيز</option>
+          <option value="47">مستشفى صبيا العام </option>
+        </select>
+        <div class="input-group"></div>
+      </div>
+      <button class="btn btn-primary" type="submit">اضافة الى قاعدة البيانات</button>
+    </form>
+  </body>
+</html>
