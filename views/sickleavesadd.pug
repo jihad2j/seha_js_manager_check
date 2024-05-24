@@ -1,0 +1,107 @@
+doctype html
+html
+  head
+    title القائمة
+    link(rel="stylesheet" href="/static/css/styless.css")
+
+  body  
+    block content
+      form(action="/toolsinfo" method="post" class="mx-0 row gx-3 gy-4 mt-3")
+        div.input-group
+          label(for="namee") الاسم
+          input.form-control(type="text", name="namee" , id="namee" , placeholder="الاسم")
+        div.input-group
+          label(for="idf") الهوية
+          input.form-control(type="text", id="idf", name="idf",maxlength="10", placeholder="الهوية")
+        div.input-group
+          label(for="datain") من تاريخ
+          input(type="date", id="datain", name="datain", value="", placeholder="من تاريخ", required)
+          label(for="dataout") الى تاريخ
+          input(type="date", id="dataout", name="dataout", value="", placeholder="الى تاريخ", required)
+          label(for="dataout") --
+        div.input-group
+          label(for="empolye") جهة العمل
+          input.form-control(type="text", id="empolye", name="empolye", placeholder="جهة العمل", required)
+        div.input-group
+         label(for="Nationalnum") الجنسية 
+         select.form-control(name="Nationalnum", id="Nationalnum")
+            option(value="1") سعودي
+            option(value="2")  مصري
+            option(value="3") سوداني
+            option(value="4") يمني
+            option(value="5") سوري
+            option(value="6") فلسطيني
+        div.input-group
+         label(for="doctor") اسم الطبيب
+         select.form-control(name="doctor", id="doctor")
+            option(value="1") محمد راشد السر - استشاري
+            option(value="2")  صالح عبدالوهاب عوض سليمان - طبيب عام
+            option(value="3")  حسن ضيف الله الفاضل -استشاري
+            option(value="4")  عبدالله مفرح علي عسير - طبيب عام
+            option(value="5")  عبدالله محمد العمري - استشاري
+            option(value="6") خالد علي العنزي - استشاري
+            option(value="7")  احمد اسامة ابوالعينين - استشاري
+            option(value="8")  فيصل وليد غالب شهوان - استشاري
+            option(value="9")  محمد الكاف - استشاري
+            option(value="10")  احمد العنزي - استشاري
+            option(value="11") يوسف العمري - استشاري
+            option(value="12") محمد سليمان البشير - استشاري
+            option(value="13") مهدي الجارودي - استشاري
+            option(value="14") اماني الحربي - استشاري
+            option(value="15") سعود رخيص خليف العنزي - طبيب عام
+            option(value="16") الاء علي الحارثي - طب الاسنان
+            option(value="17") جمال راشد السر - استشاري
+            option(value="18")  مصباح عباس الحنبلي - استشاري
+            option(value="19")  محمد الصياد - استشاري    
+        div.input-group
+         label(for="center") المركز 
+         select.form-control(name="center", id="center")
+            option(value="1")  المركز السعودي الطبي
+            option(value="2")  مستشفى الملك فهد العام
+            option(value="3")  مستشفى الملك عبدالعزيز العام
+            option(value="4")  مستشفى الملك سعود العام
+            option(value="5")  مستشفى الملك خالد العام
+            option(value="6")  مستشفى الملك سلمان العام
+            option(value="7")  مستشفى الملك فهد التخصصي
+            option(value="8")  مستشفى الملك عبدالعزيز التخصصي
+            option(value="9")  مستشفى الملك سعود التخصصي
+            option(value="10")  مستشفى الملك خالد التخصصي
+            option(value="11")  مستشفى الملك سلمان التخصصي
+            option(value="12")  مستشفى الملك عبدالله التخصصي
+            option(value="13")  مستشفى الملك فهد الجامعي
+            option(value="14")  مستشفى الصادق
+            option(value="15")  مستشفى الامير سلطان
+            option(value="16")  مستشفى خميس مشيط العام
+            option(value="17")  مستشفى الخفجي العام
+            option(value="18")  مستشفى جازان العام
+            option(value="19")  مستشفى عسير المركزي
+            option(value="20")  مستشفى الدمام المركزي
+            option(value="21")  مستشفى حراء العام
+            option(value="22")  مستشفى القصيم الوطني
+            option(value="23")  مجمع رهف الطبي
+            option(value="24")  مستشفى الحياة الوطني
+            option(value="25")  مجمع الدمام الاهلي
+            option(value="26")  مستشفى الظافر بنجران
+            option(value="27")  مدينة الملك سعود الطبية
+            option(value="28")  مدينة الملك عبدالله الطبية
+            option(value="29")  مستشفى القوات المسلحة
+            option(value="30")  مستشفى الامير منصور العسكري
+            option(value="31")  مستشفى النماص العام
+            option(value="32")  مجمع العالمي الطبي
+            option(value="33") مجمع العائلة الطبي
+            option(value="34") مستشفى الملك خالد بالخبر
+            option(value="35") مستشفى محايل عسير العام
+            option(value="36") مستشفى قنفذة العام
+            option(value="37") مجمع الدمام الطبية
+            option(value="38") مستشفى دلة الصحي
+            option(value="39") مستشفى الدكتور سليمان حبيب
+            option(value="40") السعودي الالماني الصحي
+            option(value="41") مستشفى عرعر المركزي
+            option(value="42") مستشفى رفحاء المركزي
+            option(value="43") مستشفى شقراء العام
+            option(value="44") مستشفى ضباء العام
+            option(value="45") العيادات المتقدمة الاستشارية
+            option(value="46") مستشفى الامير محمد بن عبدالعزيز
+            option(value="47") مستشفى صبيا العام 
+         div.input-group
+        button(type="submit" class="btn btn-primary") اضافة الى قاعدة البيانات

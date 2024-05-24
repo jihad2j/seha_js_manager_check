@@ -1,0 +1,35 @@
+doctype html
+html
+  head
+    title= "القائمة"
+    link(rel="stylesheet", href="/static/css/styless.css")
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap")
+  body  
+    form(action="") 
+      table.table.table-dark.mb-0  
+        thead(style="background-color: #393939;")
+          th(scope="col") 
+            span(style="color: red;") #
+          th(scope="col") FileNo
+          th(scope="col") Identiy
+          th(scope="col") FullName
+          th(scope="col") DateStart
+          th(scope="col") DateEnd
+          th(scope="col") Day
+          th(scope="col") Tools
+        tbody
+           - var reversedUsers = [...users].reverse()
+           each item, index in reversedUsers
+            tr
+              th(scope="row") #{reversedUsers.length - index}
+                td #{item.inputgsl}
+                td #{item.inputidentity}
+                td #{item.inputnamear}
+                td #{item.inputdatefrom}
+                td #{item.inputdateto}
+                td #{item.inputdaynum}
+                td
+                 button.btn.btn-primary.btn-sm(style="background-color: #5485bd;", type="button", onclick=`window.location.href='./model_sikleaves/sickleavecreat/${item._id}'`, target="_blank") طباعة
+                 button.btn.btn-primary.btn-sm(style="background-color: #098805;", type="button", onclick=`window.location.href='./editqr/${item._id}'`, target="_blank") تعديل
+                 button.btn.btn-primary.btn-sm(style="background-color: #aa1717;", type="button", onclick=`if (confirm('هل تريد حذف بيانات العميل?')) window.location.href='./delete/${item._id}'`,target="_blank") حذف
+                 
