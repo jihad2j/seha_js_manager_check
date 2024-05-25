@@ -2,6 +2,24 @@
 var resultsDiv = document.getElementById('resultsDiv');//info
 var submit = document.getElementById('submit');//submit
 var toggleButton = document.getElementById('toggleButton')//res
+function convertDate(dateString) {
+    var arabicNumbers = ['٠', '١', '٢', '٣', '٤', '٥', '٦', '٧', '٨', '٩'];
+    var englishNumbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+    var convertedDateString = "";
+    // تحويل الأرقام العربية إلى الأرقام الإنجليزية
+    for (var i = 0; i < dateString.length; i++) {
+      var char = dateString[i];
+      var index = arabicNumbers.indexOf(char);
+      if (index != -1) {
+        char = englishNumbers[index];
+      }
+      convertedDateString += char;
+    }
+    // عكس تنسيق التاريخ
+    var dateParts = convertedDateString.split("-");
+    convertedDateString = dateParts[2] + "-" + dateParts[1] + "-" + dateParts[0];
+    return convertedDateString;
+  }
 
 submit.addEventListener('click', function () {
     var inputnormalizedservicecode = document.getElementById("normalizedservicecode");
@@ -32,8 +50,9 @@ submit.addEventListener('click', function () {
                 submit.style.display = 'none';//submit
                 //window.location = 'login'
             } else {
+                var inputdatesick = convertDate(data.inputdatesick); 
                 document.getElementById('patientname').textContent = data.inputnamear;
-                document.getElementById('sickleavedate').textContent = data.inputdatesick;
+                document.getElementById('sickleavedate').textContent = inputdatesick;
                 document.getElementById('duration').textContent = data.inputdaynum;
                 document.getElementById('from1').textContent = data.inputdatefrom;
                 document.getElementById('to1').textContent = data.inputdateto;
@@ -48,8 +67,6 @@ submit.addEventListener('click', function () {
         })
         .catch(() => { 
         });
-
-    
 });
 //325156565651561565651561
 toggleButton.addEventListener('click', function () {
