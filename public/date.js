@@ -35,8 +35,8 @@ submit.addEventListener('click', function () {
                 document.getElementById('patientname').textContent = data.inputnamear;
                 document.getElementById('sickleavedate').textContent = data.inputdatesick;
                 document.getElementById('duration').textContent = data.inputdaynum;
-                document.getElementById('from1').textContent = data.inputdatehin;
-                document.getElementById('to1').textContent = data.inputdatemout;
+                document.getElementById('from1').textContent = data.inputdatefrom;
+                document.getElementById('to1').textContent = data.inputdateto;
                 document.getElementById('doctorname').textContent = data.inputdoctorar;
                 document.getElementById('jobtitle').textContent = data.inputworktypear;
                 resultsDiv.style.display = 'flex';//info
