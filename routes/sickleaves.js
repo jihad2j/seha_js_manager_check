@@ -12,15 +12,12 @@ router.get('/delete/:id', function (req, res) {
     })
     .then(data => {
       if (data) {
-       
+       res.redirect('/main');
         console.log(data);
       } else {
         res.status(404).json({
           message: 'error'
-          
         });
-        console.log('error');
-        console.log('error2');
       }
     })
     .catch(err => {
